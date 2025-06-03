@@ -1,15 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { CounterState, RootState } from "../store";
-
-const initialState: CounterState = {
-  value: 0,
-};
+import type { RootState } from "../store";
 
 export const counterSlice = createSlice({
   name: "counter",
-  initialState,
+  initialState: {
+    value: 0,
+  },
   reducers: {
-    increment: (state: CounterState) => {
+    increment: (state) => {
       state.value += 1;
     },
   },

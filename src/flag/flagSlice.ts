@@ -1,15 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { FlagState } from "../store";
-
-const initialState: FlagState = {
-  value: false,
-};
 
 export const flagSlice = createSlice({
   name: "flag",
-  initialState,
+  initialState: {
+    value: false,
+  },
   reducers: {
-    toggle: (state: FlagState) => {
+    toggle: (state) => {
       state.value = !state.value;
     },
   },
