@@ -1,11 +1,12 @@
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../store";
+import { selectFlag } from "../flag/flagSlice";
 import { increment, selectCount } from "./counterSlice";
 
 export function Counter() {
-  const count = useSelector(selectCount);
-  const flag = useSelector((state: RootState) => state.flag.value);
   const dispatch = useDispatch();
+
+  const count = useSelector(selectCount);
+  const flag = useSelector(selectFlag);
 
   return (
     <div>

@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import type { RootState } from "../store";
 
 export const flagSlice = createSlice({
   name: "flag",
@@ -13,5 +14,11 @@ export const flagSlice = createSlice({
 });
 
 export const { toggle } = flagSlice.actions;
+
+export const selectFlag = (state: RootState): boolean => {
+  console.log("selectFlag called");
+
+  return state.flag.value;
+};
 
 export default flagSlice.reducer;
