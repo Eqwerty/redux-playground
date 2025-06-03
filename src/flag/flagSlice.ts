@@ -15,10 +15,6 @@ export const flagSlice = createSlice({
 
 export const { toggle } = flagSlice.actions;
 
-export const selectFlag = (state: RootState): boolean => {
-  console.log("selectFlag called");
-
-  return state.flag.value;
-};
+export const selectFlag = (state: RootState): boolean => state.flag.value;
 
 export default flagSlice.reducer;
