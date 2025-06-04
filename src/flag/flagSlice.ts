@@ -1,11 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { RootState } from "../store";
 
+interface FlagState {
+  value: boolean;
+}
+
+const initialState: FlagState = {
+  value: false,
+};
+
 export const flagSlice = createSlice({
   name: "flag",
-  initialState: {
-    value: false,
-  },
+  initialState,
   reducers: {
     toggle: (state) => {
       state.value = !state.value;
