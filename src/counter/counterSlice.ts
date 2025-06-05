@@ -15,10 +15,6 @@ export const counterSlice = createSlice({
 
 export const { increment } = counterSlice.actions;
 
-export const selectCount = (state: RootState): number => {
-  console.log("selectCount called");
-
-  return state.counter.value;
-};
+export const selectCount = (state: RootState): number => state.counter.value;
 
 export default counterSlice.reducer;
